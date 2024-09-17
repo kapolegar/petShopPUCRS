@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop - Produtos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos para a página de produtos*/
+        body {
+            background-color: #F4F4F4;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 22px;
+            color: #E31C46;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            background-color: #F4F4F4;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .header-logo {
+            margin-right: 20px;
+        }
+
+        .header-logo img {
+            height: 90px;
+        }
+
+        .header-content {
+            text-align: left;
+            margin-right: 20px;
+            flex-grow: 1;
+        }
+
+        .search-container {
+            margin-top: 10px;
+            width: 33%;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons a {
+            margin-right: 10px;
+        }
+
+        .header-icons img {
+            height: 20px;
+            padding: 10px;
+
+        }
+
+        .navbar {
+            background-color: #F4F4F4;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+            background-color: #F4F4F4;
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 15px;
+            background-color: #F4F4F4;
+        }
+
+        .navbar-nav .nav-link {
+            color: #E31C46 !important;
+            background-color: #F4F4F4;
+            padding: 15px;
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            font-weight: bold;
+            background-color: #F4F4F4;
+        }
+
+        .underline-bar {
+            height: 4px;
+            background-color: #E31C46;
+            margin: 0 auto;
+            width: 33%;
+        }
+
+        .recommended-products {
+            font-family: 'Nunito Sans';
+            font-weight: bolder;
+            font-size: 25px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        .footer {
+            font-family: 'Nunito Sans';
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #1CE3B9;
+            color: #E31C46;
+            align-self: self-end;
+            text-align: center;
+        }
+        .img-fluid { 
+            height: 300px;
+            width: 300px;
+        }
+        .products {
+            font-family: 'Nunito Sans';
+            font-weight: bolder;
+            font-size: 25px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header-container">
+        <div class="header-logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <div class="header-content">
+            <h1>CUTIES PET SHOP</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="O que o seu pet precisa hoje?" />
+            </div>
+        </div>
+        <div class="header-icons-images">
+            <a href="cadastro.html">
+                <img src="img/cadastro.png" alt="Cadastro" , height="35">
+            </a>
+            <a href="contato.html">
+                <img src="img/contato.png" alt="Contato" , height="35">
+            </a>
+        </div>
+        <br>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">PRODUTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicos.html">SERVIÇOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="underline-bar"></div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-container text-center">
+        <div class="products">
+        <h3>NOSSOS PRODUTOS</h3>
+        <div class="row">
+            <!-- Exemplo de cartão de produto -->
+            <div class="col-md-2">
+                <div class="product-card">
+                    <img src="img/produto1.jpg" class="img-fluid" alt="Produto 1">
+                    <h4>Ração Golden Gatos</h4>
+                    <p>R$ 30,00</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="product-card">
+                    <img src="img/produto2.jpg" class="img-fluid" alt="Produto 2">
+                    <h4>Ração Royal Canin Gatos</h4>
+                    <p>R$ 35,00</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-card">
+                    <img src="img/produto3.jpg" class="img-fluid" alt="Produto 2">
+                    <h4>Ração Origens Gatos</h4>
+                    <p>R$ 45,00</p>
+                </div>
+            </div>
+            <div class="col"></div>
+            <div class="product-card">
+                <img src="img/produto4.jpg" class="img-fluid" alt="Produto 2">
+                <h4>Ração Friskies Gatos</h4>
+                <p>R$ 25,00</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 CUTIES PET SHOP. Todos os direitos reservados. Contato: contato@petshop.com</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>

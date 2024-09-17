@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop - Cadastro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    /* Estilos específicos para a página de cadastro*/
+    body {
+        background-color: #F4F4F4;
+        font-family: 'Nunito Sans';
+        font-size: 22px;
+        color: #E31C46;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        background-color: #F4F4F4;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .header-logo {
+        margin-right: 20px;
+    }
+
+    .header-logo img {
+        height: 90px;
+    }
+
+    .header-content {
+        text-align: left;
+        margin-right: 20px;
+        flex-grow: 1;
+    }
+
+    .search-container {
+        margin-top: 10px;
+        width: 33%;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-icons a {
+        margin-right: 10px;
+    }
+
+    .header-icons img {
+        height: 20px;
+        padding: 10px;
+
+    }
+
+    .navbar {
+        background-color: #F4F4F4;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        background-color: #F4F4F4;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 15px;
+        background-color: #F4F4F4;
+    }
+
+    .navbar-nav .nav-link {
+        color: #E31C46 !important;
+        background-color: #F4F4F4;
+        padding: 15px;
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+        font-weight: bold;
+        background-color: #F4F4F4;
+    }
+
+    .underline-bar {
+        height: 4px;
+        background-color: #E31C46;
+        margin: 0 auto;
+        width: 33%;
+    }
+
+    .recommended-products {
+        font-family: 'Nunito Sans';
+        font-weight: bolder;
+        font-size: 25px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .footer {
+        font-family: 'Nunito Sans';
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #1CE3B9;
+        color: #E31C46;
+        align-self: self-end;
+        text-align: center;
+    }
+    .img-fluid { 
+        height: 300px;
+        width: 300px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Cabeçalho -->
+<div class="header-container">
+    <div class="header-logo">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+    <div class="header-content">
+        <h1>CUTIES PET SHOP</h1>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="O que o seu pet precisa hoje?" />
+        </div>
+    </div>
+    <div class="header-icons-images">
+        <a href="cadastro.html">
+            <img src="img/cadastro.png" alt="Cadastro" , height="35">
+        </a>
+        <a href="contato.html">
+            <img src="img/contato.png" alt="Contato" , height="35">
+        </a>
+    </div>
+    <br>
+</div>
+
+<!-- Navegação -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="produtos.html">PRODUTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">SERVIÇOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="underline-bar"></div>
+
+    <!-- Lista de Responsáveis Cadastrados -->
+    <section class="container mt-5">
+        <h2 class="text-center">Responsáveis Cadastrados</h2>
+        <ul id="responsavelList" class="list-group">
+        </ul>
+        <div class="text-center mt-3">
+            <button id="btnCadastrarResponsavel" class="btn btn-primary">Cadastrar Novo Responsável</button>
+        </div>
+    </section>
+
+    <!-- Lista de Pets Cadastrados -->
+    <section class="container mt-5">
+        <h2 class="text-center">Pets Cadastrados</h2>
+        <ul id="petList" class="list-group">
+        </ul>
+        <div class="text-center mt-3">
+            <button id="btnCadastrarPet" class="btn btn-primary">Cadastrar Novo Pet</button>
+        </div>
+    </section>
+
+    <!-- Modal de Cadastro de Responsável -->
+    <div class="modal fade" id="cadastroResponsavelModal" tabindex="-1" role="dialog" aria-labelledby="cadastroResponsavelModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroResponsavelModalLabel">Cadastrar Novo Responsável</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="cadastroResponsavelForm">
+                        <div class="form-group">
+                            <label for="nomeResponsavel">Nome do Responsável</label>
+                            <input type="text" class="form-control" id="nomeResponsavel" placeholder="Nome do Responsável" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefoneResponsavel">Telefone</label>
+                            <input type="tel" class="form-control" id="telefoneResponsavel" placeholder="Telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enderecoResponsavel">Endereço</label>
+                            <input type="text" class="form-control" id="enderecoResponsavel" placeholder="Endereço" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro de Pet -->
+    <div class="modal fade" id="cadastroPetModal" tabindex="-1" role="dialog" aria-labelledby="cadastroPetModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroPetModalLabel">Cadastrar Novo Pet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="cadastroPetForm">
+                        <div class="form-group">
+                            <label for="nomePet">Nome do Pet</label>
+                            <input type="text" class="form-control" id="nomePet" placeholder="Nome do Pet" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipoPet">Tipo de Pet</label>
+                            <select id="tipoPet" class="form-control" required>
+                                <option selected disabled>Escolher...</option>
+                                <option>Cachorro</option>
+                                <option>Gato</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Temperamento do Pet</label><br>
+                            <input type="radio" id="calmo" name="temperamento" value="calmo" required>
+                            <label for="calmo">Calmo</label><br>
+                            <input type="radio" id="agitado" name="temperamento" value="agitado">
+                            <label for="agitado">Agitado</label><br>
+                            <input type="radio" id="medroso" name="temperamento" value="medroso">
+                            <label for="medroso">Medroso</label><br>
+                            <input type="radio" id="brabo" name="temperamento" value="brabo">
+                            <label for="brabo">Brabo</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 CUTIES PET SHOP. Todos os direitos reservados. Contato: contato@petshop.com</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>

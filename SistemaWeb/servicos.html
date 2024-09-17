@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop - Serviços</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos para a página de servicos*/
+        body {
+            background-color: #F4F4F4;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 22px;
+            color: #E31C46;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            background-color: #F4F4F4;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .header-logo {
+            margin-right: 20px;
+        }
+
+        .header-logo img {
+            height: 90px;
+        }
+
+        .header-content {
+            text-align: left;
+            margin-right: 20px;
+            flex-grow: 1;
+        }
+
+        .search-container {
+            margin-top: 10px;
+            width: 33%;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons a {
+            margin-right: 10px;
+        }
+
+        .header-icons img {
+            height: 20px;
+            padding: 10px;
+
+        }
+
+        .navbar {
+            background-color: #F4F4F4;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+            background-color: #F4F4F4;
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 15px;
+            background-color: #F4F4F4;
+        }
+
+        .navbar-nav .nav-link {
+            color: #E31C46 !important;
+            background-color: #F4F4F4;
+            padding: 15px;
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            font-weight: bold;
+            background-color: #F4F4F4;
+        }
+
+        .underline-bar {
+            height: 4px;
+            background-color: #E31C46;
+            margin: 0 auto;
+            width: 33%;
+        }
+
+        .recommended-products {
+            font-family: 'Nunito Sans';
+            font-weight: bolder;
+            font-size: 25px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        .footer {
+            font-family: 'Nunito Sans';
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #1CE3B9;
+            color: #E31C46;
+            align-self: self-end;
+            text-align: center;
+        }
+        .img-fluid { 
+            height: 300px;
+            width: 300px;
+        }
+        .servicos {
+            font-family: 'Nunito Sans';
+            font-weight: bolder;
+            font-size: 25px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header-container">
+        <div class="header-logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <div class="header-content">
+            <h1>CUTIES PET SHOP</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="O que o seu pet precisa hoje?" />
+            </div>
+        </div>
+        <div class="header-icons-images">
+            <a href="cadastro.html">
+                <img src="img/cadastro.png" alt="Cadastro" , height="35">
+            </a>
+            <a href="contato.html">
+                <img src="img/contato.png" alt="Contato" , height="35">
+            </a>
+        </div>
+        <br>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">PRODUTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicos.html">SERVIÇOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="underline-bar"></div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-container text-center">
+        <div class="servicos">
+        <h3>NOSSOS SERVICOS</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-card" data-service="Banho e Tosa">
+                    <h4>Banho e Tosa</h4>
+                    <p>Deixe seu pet sempre limpo e bonito. R$ 40,00</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card" data-service="Veterinário">
+                    <h4>Veterinário</h4>
+                    <p>Consulta veterinária completa. R$ 150,00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal para Solicitação de Serviço -->
+    <div class="modal fade" id="servicoModal" tabindex="-1" role="dialog" aria-labelledby="servicoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="servicoModalLabel">Solicitar Serviço</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="solicitacaoServicoForm">
+                        <div class="form-group">
+                            <label for="animalSelect">Selecionar Animal</label>
+                            <select id="animalSelect" class="form-control">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="responsavelSelect">Selecionar Responsável</label>
+                            <select id="responsavelSelect" class="form-control">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Busca do Animal</label><br>
+                            <input type="radio" id="buscaSim" name="busca" value="Sim">
+                            <label for="buscaSim">Sim</label><br>
+                            <input type="radio" id="buscaNao" name="busca" value="Não">
+                            <label for="buscaNao">Não</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataServico">Data do Serviço</label>
+                            <input type="date" id="dataServico" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="horaServico">Hora do Serviço</label>
+                            <input type="time" id="horaServico" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Concluir Solicitação</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 CUTIES PET SHOP. Todos os direitos reservados. Contato: contato@petshop.com</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/servicos.js"></script>
+
+</body>
+
+</html>

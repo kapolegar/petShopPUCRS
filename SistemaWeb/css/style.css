@@ -1,0 +1,36 @@
+body {
+    font-family: 'Nunito Sans';
+    font-size: 22px;
+    color: #E31C46;
+}
+
+header h1 {
+    font-family: 'Nunito Sans';
+    font-size: 25px;
+    font-weight: 800;
+    color: #E31C46;
+}
+
+section h2 {
+    font-family: 'Nunito Sans';
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    color: #E31C46;
+}
+
+section h3 {
+    container-type: "input";
+    font-family: 'Nunito Sans';
+    font-size: 25px;
+    color: #E31C46;
+    width: 50%;
+}
+
+footer {
+    font-family: 'Nunito Sans';
+    margin-top: 15px;
+    background-color: #1CE3B9;
+    color: #E31C46;
+}
+

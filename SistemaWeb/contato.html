@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop - Cadastro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos para a página de contato*/
+        body {
+            background-color: #F4F4F4;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 22px;
+            color: #E31C46;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            background-color: #F4F4F4;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .header-logo {
+            margin-right: 20px;
+        }
+
+        .header-logo img {
+            height: 90px;
+        }
+
+        .header-content {
+            text-align: left;
+            margin-right: 20px;
+            flex-grow: 1;
+        }
+
+        .search-container {
+            margin-top: 10px;
+            width: 33%;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons a {
+            margin-right: 10px;
+        }
+
+        .header-icons img {
+            height: 35px;
+        }
+
+        .navbar {
+            background-color: #F4F4F4;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 15px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #E31C46 !important;
+            padding: 15px;
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            font-weight: bold;
+        }
+
+        .underline-bar {
+            height: 4px;
+            background-color: #E31C46;
+            margin: 0 auto;
+            width: 33%;
+        }
+
+        .fale-conosco {
+            width: 100%;
+            height: 995px;
+            background-color: #F4F4F4;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fale-conosco-item1 {
+            width: 100%;
+            height: 995px;
+            background: rgba(244, 244, 244, 1);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .fale-conosco-item2 {
+            width: 542px;
+            color: rgba(227, 28, 70, 1);
+            position: absolute;
+            top: 356px;
+            left: 910px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: ExtraBold;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .fale-conosco-item3 {
+            width: 525px;
+            color: rgba(227, 28, 70, 1);
+            position: absolute;
+            top: 450px;
+            left: 1055px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: Bold;
+            font-size: 25px;
+            text-align: left;
+        }
+
+        .fale-conosco-item4, .fale-conosco-item5 {
+            width: 525px;
+            color: rgba(227, 28, 70, 1);
+            position: absolute;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: Bold;
+            font-size: 25px;
+            text-align: left;
+        }
+
+        .fale-conosco-item4 {
+            top: 522px;
+            left: 1055px;
+        }
+
+        .fale-conosco-item5 {
+            top: 594px;
+            left: 1055px;
+        }
+
+        .fale-conosco-item6 {
+            width: 705px;
+            height: 472px;
+            background: rgba(255, 255, 255, 1);
+            position: absolute;
+            top: 326px;
+            left: 174px;
+            border-radius: 20px;
+        }
+
+        .fale-conosco-item7 {
+            width: 621px;
+            color: rgba(227, 28, 70, 1);
+            position: absolute;
+            top: 430px;
+            left: 220px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: Regular;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .fale-conosco-item8 {
+            width: 542px;
+            color: rgba(227, 28, 70, 1);
+            position: absolute;
+            top: 356px;
+            left: 256px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: ExtraBold;
+            font-size: 35px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header-container">
+        <div class="header-logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <div class="header-content">
+            <h1>CUTIES PET SHOP</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="O que o seu pet precisa hoje?" />
+            </div>
+        </div>
+        <div class="header-icons">
+            <a href="cadastro.html">
+                <img src="img/cadastro.png" alt="Cadastro">
+            </a>
+            <a href="contato.html">
+                <img src="img/contato.png" alt="Contato">
+            </a>
+        </div>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">PRODUTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicos.html">SERVIÇOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="underline-bar"></div>
+
+    <div class="fale-conosco">
+        <div class="fale-conosco-item1"></div>
+        <div class="contact-info">
+            <span class="fale-conosco-item2">FALE CONOSCO</span>
+            <span class="fale-conosco-item3">0000 - 0000 ou 3333 - 3333</span>
+            <span class="fale-conosco-item4">cuties@cutiespetshop.com.br</span>
+            <span class="fale-conosco-item5">@cutiespetshop</span>
+        </div>
+        <div class="about-us">
+            <div class="fale-conosco-item6"></div>
+            <span class="fale-conosco-item7">
+                Lorem ipsum dolor sit amet. Id voluptatem nobis hic rerum facere et voluptates consectetur. Eos
+                reiciendis obcaecati et porro voluptates ut aspernatur aliquid qui fugiat sapiente.
+                Et culpa aspernatur ut repellendus esse cum nobis consectetur? Ad recusandae rerum ut placeat nobis
+                ut error nesciunt. Eos quasi natus et amet eveniet 33 dignissimos officiis qui consequatur
+                asperiores.
+                Et omnis neque et dolores magni quo rerum libero eos sint quasi ut odio minus! A explicabo quia eos
+                quis nobis ex galisum maiores id inventore pariatur sit omnis adipisci.
+            </span>
+            <span class="fale-conosco-item8">SOBRE NÓS</span>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 CUTIES PET SHOP. Todos os direitos reservados. Contato: contato@petshop.com</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
